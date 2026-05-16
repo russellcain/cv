@@ -2,7 +2,7 @@
 title: 'wormy'
 description: 'another short'
 pubDate: 'Dec 15 2025'
-heroImage: '../../assets/wormy.png'
+heroImage: '../../assets/wormy.jpg'
 ---
 As the pen clicks, my confidence falters. The ideas for this story or poem or sage nugget of truth scurry away, afraid that the spotlight will reveal their translucent armor. To learn to be alone is to learn how to rite, or at least that’s how it has felt for me recently. It isn’t the correctness, the merit of the ideas that earn their place on this page, but rather that this just so happened to be where they needed to spill out. With time and practice, sure - maybe they’ll be able to carry their won in a conversation with some eager reader. But before their time in that spotlight, they need some space to stumble around and skin their knees, but my head can be a bit to crowded for that.
 
