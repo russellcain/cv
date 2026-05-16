@@ -61,22 +61,20 @@ body {
 .mountains {
   position: relative;
   z-index: 0;
-  top: 5%;
-  left: 5%;
-  bottom: 500%;
-  width: 90%;
+  width: 96%;
+  height: 185px;
 }
 
 .profile-img {
   position: absolute;
   z-index: 1;
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--accent);
   margin-bottom: 1.5rem;
-  margin-left: 50%;
+  margin-left: 70%;
   justify-content: right;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
 }
@@ -181,7 +179,7 @@ body {
   color: var(--sidebar-bg);
   border-bottom: 2px solid #e5e7eb;
   padding-bottom: 0.5rem;
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -191,7 +189,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-bottom: 3rem;
+  padding-top: -10%;
 }
 
 .job-entry {

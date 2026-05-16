@@ -41,10 +41,11 @@ export const projects = [
 
 export const experience = [
   {
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     company: "PeloTech",
     date: "Sep 2024-Present",
     bullets: [
+      "Migrated an antiquated .NET project into an event-driven, OLAP-backed distributed system.",
       "Designed and implemented full-stack TypeScript applications with RESTful APIs, role-based access control, and real-time analytics serving 10,000+ users.",
       "Built scalable third-party API integrations with robust error handling, pagination strategies, and retry mechanisms to ensure system reliability.",
       "Led monorepo architecture migration and service refactoring, improving build performance by 40% and enabling cross-team code sharing.",
