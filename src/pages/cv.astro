@@ -1,0 +1,118 @@
+---
+import '../styles/cv.css';
+
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { basics, stack, hobbies, projects, experience, education } from '../data/resume_content';
+import headshot from '../assets/boat_pic_original.jpg';
+import mountains from '../assets/mountains.svg';
+import { Image } from 'astro:assets';       // Import Astro's optimized Image component
+---
+<html lang="en">
+<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<Header />
+  </head>
+  <body>
+    <main class="cv-container">
+      
+      <aside class="sidebar">
+        <div class="profile-section">
+          <h1 class="name">{basics.name}</h1>
+          <h2 class="title">{basics.title}</h2>
+        </div>
+
+        <div class="contact-info">
+          <span class="contact-item"><span>&#128222;</span> {basics.phone}</span>
+          <span class="contact-item"><span>&#9993;</span> {basics.email}</span>
+          <span class="contact-item"><span>&#128187;</span> github.com/{basics.github}</span>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-header">About me</h3>
+          <div class="about-text">
+            {basics.about.map(paragraph => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-header">Stack</h3>
+          <div class="stack-grid">
+            {stack.map(tech => (
+              <span class="stack-tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-header">Hobbies</h3>
+          <ul class="hobbies-list">
+            {hobbies.map(hobby => (
+              <li>{hobby}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-header">Projects</h3>
+          <div>
+            {projects.map(project => (
+              <div class="project-item">
+                <h4 class="project-name">{project.name}</h4>
+                <p class="project-stack">{project.stack}</p>
+                <p class="project-desc">{project.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </aside>
+
+      <section class="main-content">
+        <div>
+          <div class="parent-photos"> 
+		        <Image src={headshot} alt="Rusty and dog" class="profile-img" />
+		        <Image src={mountains} alt="mountains" class="mountains" />
+          </div>
+          <h3 class="main-header">Experience</h3>
+          <div class="experience-list">
+            {experience.map(job => (
+              <div class="job-entry">
+                <div class="job-header">
+                  <div>
+                    <h4 class="job-title">{job.title}</h4>
+                    <h5 class="job-company">{job.company}</h5>
+                  </div>
+                  <span class="job-date">{job.date}</span>
+                </div>
+                <ul class="job-bullets">
+                  {job.bullets.map(bullet => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 class="main-header">Education</h3>
+          <div class="education-grid">
+            {education.map(edu => (
+              <div class="edu-card">
+                <h4 class="edu-school">{edu.school}</h4>
+                <p class="edu-degree">{edu.degree}</p>
+                <p class="edu-date">{edu.date}</p>
+                <p class="edu-details">{edu.details}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>
