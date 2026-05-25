@@ -1,6 +1,6 @@
 ---
 title: Articles Read
-description: Here are some articles I've read recently, complete with some thoughts on them
+description: Articles that I'm stewing on
 pubDate: 06/24/2026
 heroImage: '../../assets/articles.jpg'
 ---
